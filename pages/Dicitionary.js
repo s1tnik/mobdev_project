@@ -159,7 +159,12 @@ const Dictionary = React.memo(function Dictionary({
                   /{information.phonetic}/
                 </Text>
               </View>
-              <TouchableOpacity onPress={() => setInformation(false)}>
+              <TouchableOpacity
+                onPress={() => {
+                  setInformation(false);
+                  setTerm("");
+                }}
+              >
                 <Text style={tailwind("text-4xl mr-3 text-sky-600 font-bold")}>
                   &#8592;
                 </Text>
